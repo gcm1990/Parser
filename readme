@@ -1,0 +1,6 @@
+	This directory includes proj2.java, Makefile, p2, readme,typescript and test_fn. 
+	proj2.java is the code for the parser.
+	p2 is the script to execute it. p2 takes a file argument. If no argument is given or if the file is void, then nothing will happen.
+	test_fn is the file I used as an argument. I used this to test my parser.
+	typescript contains a record of my test. 
+	For brevity, here's a summary of the parser. After scanning tokens, they're put into an array. Then the order of the tokens is checked by the parser with a lookahead of 1, according to the grammar given on p.492. As such, the grammar needed to have left recursion removed, and choices with the same first sets to be modified. Otherwise, the program would be stuck in a loop, and wouldn't know what to do. I modified according to what I learned in class. The parser looks at the tokens, and sees which type of rules they may be categorized under. Once all of the tokens have been parsed, it will print ACCEPT, lest it prints REJECT.  
